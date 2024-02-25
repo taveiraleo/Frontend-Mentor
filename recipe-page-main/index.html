@@ -29,7 +29,7 @@
     }
     main{
       background-color: var(--main-background-color);
-      max-width: 650px;
+      max-width: 690px;
       margin: auto; 
       border-radius: 10px; 
     }
@@ -43,11 +43,13 @@
       padding: 30px 30px 0px 30px;
     }
     section#main{
-      padding: 30px;
+      padding: 0px 30px 30px 30px;
     }
     h1{
       font-family: var(--font-title);
+      font-size: 32px;
       color: var(--color-title1);
+      margin-bottom: 0px;
     }
     h2{
       font-family: var(--font-title);
@@ -55,19 +57,43 @@
     }
     h3{
       color: var(--color-title3);
+      margin: 0px;
     }
+    
     aside{
       background-color: var(--aside-background-color);
+      padding: 20px;
+      margin: 30px 0px;
+      border-radius: 10px;
+    }
+    aside ul{
+      margin: 10px 0px 0px 0px;
+    }
+    aside li::marker{
+    color: var(--color-title3);
+   }
+    ul,ol{
+      padding-left: 20px;
     }
     li{
       padding: 5px;
+      padding-left: 15px;
     }
    li::marker{
     color: var(--color-title2);
     font-weight: bold;
    }
-   aside li::marker{
-    color: var(--color-title3);
+   hr{
+    color: hsl(30, 18%, 87%);
+   }
+   table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+   }
+   th,td{
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+    padding: 10px 30px;
    }
    th{
     font-weight: 400;
@@ -75,6 +101,9 @@
    td{
     font-weight: bold;
     color: var(--color-title2);
+   }
+   tr#last-line th, tr#last-line td{
+    border-bottom: none;
    }
    div.attribution{
     text-align: center;
@@ -139,7 +168,7 @@
           <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
         </ul>
       </section>
-    
+     <hr>
       <section>
         <h2>Instructions</h2>
         <ol>
@@ -163,6 +192,7 @@
           <li><strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.</li>
         </ol>
       </section>
+      <hr>
       <section>
         <h2>Nutrition</h2>
         <p>The table below shows nutritional values per serving without the additional fillings.</p>
@@ -179,7 +209,7 @@
             <th>Protein</th>
             <td>20g</td>
           </tr>
-          <tr>
+          <tr id="last-line">
             <th>Fat</th>
             <td>22g</td>
           </tr>
